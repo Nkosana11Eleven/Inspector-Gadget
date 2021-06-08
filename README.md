@@ -1,4 +1,4 @@
-# Inspector-Gadget
+# U+FE0F Inspector-Gadget
 Designed to improve the workflow process of automation engineers
 
 # Generates a batch of variables with respective xpaths stored during inspection

@@ -1,0 +1,28 @@
+{
+    "name": "[STS] Inspector Gadget",
+    "description": "Designed To Optimize Web Inspection For STS Automation Engineers",
+    "version": "1.0",
+    "author" : "Nkosana Khoza",
+    "manifest_version": 2,
+    "background" : {
+        "scripts" : ["scripts/background.js"]
+    },
+    "permissions":["contextMenus", "<all_urls>","storage"],
+    "icons" : {
+        "16" :"b.png",
+        "128":"b.png",
+        "48" : "b.png"
+    },
+    "devtools_page":"devtools/devtools.html",
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["scripts/content.js", "popup/popup.js"],
+            "css":["scripts/devstyles.css"]
+        }
+    ],
+    "browser_action" : {
+        "default_icon" : "b.png",
+        "default_popup" : "popup/popup.html"
+    }
+}

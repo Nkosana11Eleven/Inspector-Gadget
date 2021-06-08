@@ -1,0 +1,95 @@
+:root{
+    --siteColor : rgb(228, 103, 8);
+    --textColor : rgb(250, 249, 249);
+}
+
+*{
+    font-family: 'Special Elite', cursive;
+}
+
+h3 {
+    color: var(--siteColor);
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.inputBox{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+   width: 200px;
+    height: 25px;
+    background: var(--siteColor);
+    color: var(--textColor);
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+    border : none;
+    border-radius: 10px;
+    align-self:center;
+    justify-self: center;
+    transition: 50ms ease-in;
+}
+
+#comment {
+    width: 350px;
+}
+
+.messageBox{
+    color:var(--textColor);
+    border: none;
+    background-color: var(--siteColor);
+    height: 25px;
+    width: max-content;
+    padding: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transition: 50ms ease-in;
+    transform: scale(1.1);
+    background: transparent;
+    color: var(--siteColor);
+    font-size: 12px;
+    font-weight: bold;
+    border : var(--siteColor) 1px solid;
+    border-radius: 7px;
+}
+
+label{
+    color: var(--textColor);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align:start;
+}
+.mainContainer{
+    margin-top: 10px;
+ 
+}
+
+input{
+    min-width: 300px;
+    max-width: 380px;
+    height: 25px;
+    border-radius: 10px;
+    border : var(--siteColor) 1px solid ;
+    background: transparent;
+    color: var(--textColor);
+    transition: 50ms ease-in;
+    text-align: center;
+}
+
+input:hover{
+    cursor: pointer;
+    transition: 50ms ease-in;
+    transform: scale(1.1);
+}
+
+input:active{
+    transition: 50ms ease-in;
+    background-color: var(--siteColor);
+}

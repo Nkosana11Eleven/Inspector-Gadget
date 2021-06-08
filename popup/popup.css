@@ -1,0 +1,92 @@
+:root{
+    --siteColor : rgb(228, 103, 8);
+    --Danger : rgba(133, 4, 4, 0.933);
+    --stdTrans : cubic-bezier(0.785, 0.135, 0.15, 0.86) 150ms;
+}
+
+*{
+    font-family: 'Special Elite', cursive;
+}
+body {
+    background-color: rgb(28, 41, 38);
+    min-width: 700px;
+  
+    max-height: fit-content;
+    min-height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 15px;
+    color : var(--siteColor);
+}
+
+#heading2 {
+    text-align: center;
+    font-size: 12px;
+    color : white;
+    margin-top: -15px;
+}
+
+.button{
+    background-color: var(--siteColor);
+    border: 0;
+    height: 25px;
+    border-radius: 8px;
+    color: white;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 150ms;
+}
+
+.button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: var(--siteColor) 1px solid;
+    color: var(--siteColor);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 150ms;
+}
+
+.buttonDanger{
+    background-color: var(--Danger);
+    border: 0;
+    height: 25px;
+    border-radius: 8px;
+    color: white;
+    transition: var(--stdTrans);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+b {
+    color: white;
+}
+
+.buttonDanger:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: var(--Danger) 1px solid;
+    color: var(--Danger);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 150ms;
+}
+
+
+.element {
+    border: var(--siteColor) 1px solid;
+    color: var(--siteColor);
+    min-height: 20px;
+    max-height:10%;
+    min-width: 100%;
+    padding:5px;
+    max-width: 100%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.element:hover{
+    cursor: pointer;
+    background: linear-gradient(from to, red, green);
+    transition: var(--stdTrans);
+}

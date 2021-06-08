@@ -5,7 +5,7 @@ Designed to improve the workflow process of automation engineers
 
   - Generates a batch of variables with respective xpaths stored during inspection
 
-1. Use third-party extention to inspect an element's xpath
+1. Use third-party extension to inspect an element's xpath
 
 2. Use Inspector Gadget to store the Element's variable name, xpath and optionally a comment associated to further provide description of the element
 

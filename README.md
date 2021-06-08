@@ -1,9 +1,9 @@
-# U+FE0F Inspector-Gadget
+# 🔥 🕵️‍♂️ Inspector-Gadget 🕵️‍♂️ 🔥
 Designed to improve the workflow process of automation engineers
 
-# Generates a batch of variables with respective xpaths stored during inspection
+### How does it work?
 
-## How does it work?
+  - Generates a batch of variables with respective xpaths stored during inspection
 
 1. Use third-party extention to inspect an element's xpath
 
@@ -13,6 +13,11 @@ Designed to improve the workflow process of automation engineers
 
 4. Export stored elements.
 
-5. CTRL+C, CTRL+V into your code editor. And Enjoy !  :) 
+5. CTRL+C, 😉 CTRL+V into your code editor 😆 . And Enjoy ! 💥
 
-6. :)  :)  :)
+6. Thank you for using 🕵️‍♂️ Inspector Gadget 🕵️‍♂️
+
+
+### Author
+🦂 Nkosana Khoza 🦹‍♂️ 
+🤓 Test Automation Analyst

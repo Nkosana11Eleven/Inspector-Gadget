@@ -18,18 +18,25 @@ function exportToFile(textData){
     var date = new Date()
     let prefix =  "inspection";
     var fileName = prompt("[*] Enter the POM Filename : ", prefix + "_");
-    link.download=fileName + ".txt";
-    
-    //Chrome Doesn't Require You To Add The Link To document Before Clicking
-    if(window.webkitURL != null){
-        link.href = window.webkitURL.createObjectURL(fileBlob)
+
+    if(fileName !== null){
+        link.download=fileName + ".txt";
+        //Chrome Doesn't Require You To Add The Link To document Before Clicking
+        if(window.webkitURL != null){
+            link.href = window.webkitURL.createObjectURL(fileBlob)
        
+        }
+        else{
+            link.href = window.URL.createObjectURL(fileBlob)
+        }
+        link.click()
     }
     else{
-        link.href = window.URL.createObjectURL(fileBlob)
 
     }
-    link.click()
+    
+    
+    
 }
 
 

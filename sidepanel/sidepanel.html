@@ -5,9 +5,9 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Batch Inspector</title>
             <link rel="stylesheet" href="sidepanel.css" >    
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">  
+            <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+            
+           
     </head>
 
     <body>
@@ -15,7 +15,7 @@
 
 
         <div class="mainContainer">    
-            <div style="display: grid;grid-template-columns: auto 400px;row-gap: 30px;">
+            <div style="display: grid;grid-template-columns: 350px 380px;row-gap: 30px;width: 100vw;">
                 <div class="inputBox">
                     <label for="variableName" >Java Variable Name</label>
                     <input type="text" id="variableName" placeholder="eg. loginButton1" />
@@ -28,22 +28,37 @@
         
                 <div class="inputBox">
                     <label for="elementXpath" >Element Xpath</label>
-                    <input type="text" id="elementXpath" placeholder="eg. /html/body/div[1]/a[0]" />
-
-                    
+                    <input type="text" id="elementXpath" placeholder="eg. /html/body/div[1]/a[0]" /> 
                 </div>
-                <button type="button" class="btn" id="capBtn">Save Element</button>
+                
+                <button type="button" class="btn" id="capBtn">
+                    Save Element
+                  
+                   
+                </button>
         
                
             </div>
 
-            <!-- <div>
-                <h2 id="messageBox" class="messageBox">Element Saved </h2>
-            </div> -->
+             
+                <!-- <h2 class="messageBox">Element Saved </h2> -->
         </div>
+       
 
         <script src="sidepanel.js"></script>
         
        
     </body>
+    <footer class="footer">
+            <div id="savedElements">
+                <h2>Saved Elements : <span id="savedKount">0</span></h2>
+            </div>
+    </footer>
 </html>
+
+
+<!--
+
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+-->

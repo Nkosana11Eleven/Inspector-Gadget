@@ -19,9 +19,31 @@ h3 {
     justify-content: center;
 }
 
+#savedElements{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer{
+    background-color: var(--siteColor);
+    border:none;
+    border-radius: 2px;
+    height: 45px;
+    width: auto;
+    position:relative;
+    bottom: 0px;
+}
+
+#saveIcon{
+    width: 18px;
+    height:18px;
+    margin-left:25px;
+}
+
 .btn{
    width: 200px;
-    height: 25px;
+    height: 30px;
     background: var(--siteColor);
     color: var(--textColor);
     font-size: 12px;
@@ -32,6 +54,11 @@ h3 {
     align-self:center;
     justify-self: center;
     transition: 50ms ease-in;
+    justify-content: center;
+    align-content:center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 #comment {
@@ -41,10 +68,15 @@ h3 {
 .messageBox{
     color:var(--textColor);
     border: none;
+    border-radius: 10px;
     background-color: var(--siteColor);
-    height: 25px;
-    width: max-content;
+    height:20px;
+    justify-items: center;
+    font-size: 12px;
+    width: 100vw;
+    text-align: center;
     padding: 10px;
+    align-self: center;
 }
 
 .btn:hover{
@@ -68,7 +100,8 @@ label{
 }
 .mainContainer{
     margin-top: 10px;
- 
+    height: 200px;
+    overflow-x: hidden;
 }
 
 input{

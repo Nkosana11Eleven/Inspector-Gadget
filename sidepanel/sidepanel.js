@@ -25,6 +25,9 @@ btn.onclick = () =>{
     let comment = document.getElementById('comment');
     var xpath1 = cleanXpath(v.value);
 
+    let savedKount = document.getElementById("savedKount");
+
+
 
     var data = {
         variableName : variableName.value,
@@ -32,6 +35,8 @@ btn.onclick = () =>{
         comment : comment.value
     }
     saveElement(data)
+
+    savedKount.innerText = elements.length
 
     variableName.value = ""
     v.value = ""

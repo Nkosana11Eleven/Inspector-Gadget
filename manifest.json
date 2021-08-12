@@ -9,9 +9,9 @@
     },
     "permissions":["contextMenus", "<all_urls>","storage"],
     "icons" : {
-        "16" :"b.png",
-        "128":"b.png",
-        "48" : "b.png"
+        "16" :"sts_logo.png",
+        "128":"sts_logo.png",
+        "48" : "sts_logo.png"
     },
     "devtools_page":"devtools/devtools.html",
     "content_scripts" : [
@@ -22,7 +22,7 @@
         }
     ],
     "browser_action" : {
-        "default_icon" : "b.png",
+        "default_icon" : "sts_logo.png",
         "default_popup" : "popup/popup.html"
     }
 }

@@ -1,20 +1,14 @@
-
+/**
+ * @author Nkosana Khoza
+ * 
+ * 
+ * [*] TODO : clean up code and add some comments, Like this here ;)
+ */
 
 var item;
 var clear;
 var heading;
 
-
-var isRun = false;
-//Hides The Clear Button Upon Popup Initialization
-window.onload = () =>{
-     item = document.getElementById("elements")
-     clear =  document.getElementById("clearButton")
-     clear.hidden = true;
-
-     
-     
-}
 
 //Handles The Exporting Of The Elements Into A Text File
 function exportToFile(textData){

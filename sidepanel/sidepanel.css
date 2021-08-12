@@ -1,6 +1,8 @@
 :root{
     --siteColor : rgb(228, 103, 8);
     --textColor : rgb(250, 249, 249);
+    --danger : rgba(243, 13, 13, 0.769);
+    --success : rgba(174, 245, 8, 0.858);
 }
 
 *{
@@ -21,8 +23,10 @@ h3 {
 
 #savedElements{
     display: flex;
+    
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 
 .footer{
@@ -35,7 +39,12 @@ h3 {
     bottom: 0px;
 }
 
-footer div h2 {
+h2 {
+    margin-left:  5px;
+
+}
+
+footer div h2, span {
     color : var(--textColor);
 }
 

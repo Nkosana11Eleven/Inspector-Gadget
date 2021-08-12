@@ -1,3 +1,9 @@
+/**
+ * @author Nkosana Khoza
+ * 
+ * 
+ * [*] TODO : clean up code and add some comments, Like this here ;)
+ */
 
 var kount = 0;
 var elements = []
@@ -23,7 +29,7 @@ const t = chrome.storage.sync.get("xpaths", (d) =>{
     let b = document.getElementById("savedKount");
 
     if(b !== undefined && d.xpaths !== undefined){
-        b.innerText = d.xpaths.length > 0 ? d.xpaths.length : 0
+        b.innerText = d.xpaths.length > 0 ? " " + d.xpaths.length : 0
     }
     
 });
@@ -36,23 +42,38 @@ btn.onclick = () =>{
     let savedKount = document.getElementById("savedKount");
     
 
+    if(variableName.value === "" || v.value === ""){
+        let footer = document.getElementById("footer");
+        footer.style.backgroundColor = "var(--danger)";
+        setTimeout(()=>{
+            footer.style.backgroundColor = "var(--siteColor)";
+        }, 500)
+    }else{
+        var data = {
+            variableName : variableName.value,
+            xpath : xpath1,
+            comment : comment.value
+        }
+        saveElement(data);
+        chrome.storage.sync.get("xpaths", (d) =>{
+            savedKount.innerText = " " + d.xpaths.length
+        });
 
+        let footer = document.getElementById("footer");
+        footer.style.transition = "300ms ease-in";
+        footer.style.backgroundColor = "var(--success)";
+        
+        setTimeout(()=>{
+            footer.style.backgroundColor = "var(--siteColor)";
+            footer.style.transition = "300ms ease-in-out";
+        }, 500)
 
-    var data = {
-        variableName : variableName.value,
-        xpath : xpath1,
-        comment : comment.value
+        variableName.value = ""
+        v.value = ""
+        comment.value = ""
     }
-    saveElement(data)
 
 
-    chrome.storage.sync.get("xpaths", (d) =>{
-        savedKount.innerText = d.xpaths.length
-    });
     
-
-    variableName.value = ""
-    v.value = ""
-    comment.value = ""
 
 }

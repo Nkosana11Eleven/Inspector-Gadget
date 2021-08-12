@@ -18,14 +18,23 @@ function cleanXpath(xpath){
 
 
 var btn = document.getElementById("capBtn");
+
+const t = chrome.storage.sync.get("xpaths", (d) =>{
+    let b = document.getElementById("savedKount");
+
+    if(b !== undefined && d.xpaths !== undefined){
+        b.innerText = d.xpaths.length > 0 ? d.xpaths.length : 0
+    }
+    
+});
 btn.onclick = () =>{
     
     var variableName = document.getElementById("variableName");
     let v = document.getElementById("elementXpath")
     let comment = document.getElementById('comment');
     var xpath1 = cleanXpath(v.value);
-
     let savedKount = document.getElementById("savedKount");
+    
 
 
 
@@ -36,7 +45,11 @@ btn.onclick = () =>{
     }
     saveElement(data)
 
-    savedKount.innerText = elements.length
+
+    chrome.storage.sync.get("xpaths", (d) =>{
+        savedKount.innerText = d.xpaths.length
+    });
+    
 
     variableName.value = ""
     v.value = ""

@@ -7,7 +7,7 @@
     "background" : {
         "scripts" : ["scripts/background.js"]
     },
-    "permissions":["contextMenus", "<all_urls>","storage"],
+    "permissions":["contextMenus", "<all_urls>","storage","downloads"],
     "icons" : {
         "16" :"sts_logo.png",
         "128":"sts_logo.png",

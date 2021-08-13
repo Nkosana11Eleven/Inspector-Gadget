@@ -42,13 +42,13 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
 
     let saved_elements = data.xpaths;
 
-    if(d != undefined){
-        if(d.length > 0){
+    if(saved_elements != undefined){
+        if(saved_elements.length > 0){
             heading.innerText = "Your elements, Inspector :D"
 
             //Render Every Saved Element
             for(var x = 0;x < saved_elements.length;x++){
-                item.innerHTML += "<p class='element' >" + saved_elements[x].variableName + " - " + saved_elements[x].xpath + "<br /> <b>" + saved_elements[x].comment + "</b> </p>";
+                items.innerHTML += "<p class='element' >" + saved_elements[x].variableName + " - " + saved_elements[x].xpath + "<br /> <b>" + saved_elements[x].comment + "</b> </p>";
             }
         }
 
@@ -57,7 +57,7 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
             
             chrome.storage.sync.set({"xpaths" : []}, () =>{
                 console.log("[!] Elements Cleared")
-                item.innerHTML = "";
+                items.innerHTML = "";
             })
             
             chrome.storage.sync.clear(() =>{

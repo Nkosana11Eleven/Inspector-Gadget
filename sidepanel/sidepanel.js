@@ -44,9 +44,11 @@ btn.onclick = () =>{
 
     if(variableName.value === "" || v.value === ""){
         let footer = document.getElementById("footer");
+        footer.style.transition = "300ms ease-in";
         footer.style.backgroundColor = "var(--danger)";
         setTimeout(()=>{
             footer.style.backgroundColor = "var(--siteColor)";
+            footer.style.transition = "300ms ease-in-out";
         }, 500)
     }else{
         var data = {

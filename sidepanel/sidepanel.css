@@ -1,8 +1,8 @@
 :root{
     --siteColor : rgb(228, 103, 8);
     --textColor : rgb(250, 249, 249);
-    --danger : rgba(243, 13, 13, 0.769);
-    --success : rgba(174, 245, 8, 0.858);
+    --danger : rgba(250, 4, 4, 0.96);
+    --success : rgb(170, 236, 14);
 }
 
 *{

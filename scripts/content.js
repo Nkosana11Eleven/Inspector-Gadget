@@ -1,9 +1,6 @@
 /**
  * @author Nkosana Khoza
- * 
- * 
- * [*] TODO : clean up code and add some comments, Like this here ;)
  */
 
 
-console.log("From Content Script")
+console.log("0xF2 - U+126");

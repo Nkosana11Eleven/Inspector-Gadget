@@ -1,12 +1,9 @@
 /**
  * @author Nkosana Khoza
- * 
- * 
- * [*] TODO : clean up code and add some comments, Like this here ;)
  */
 
-var item;
-var clear;
+var items;
+var clearButton;
 var heading;
 
 
@@ -14,52 +11,49 @@ var heading;
 function exportToFile(textData){
     var fileBlob = new Blob([textData], {type:"text/plain"});
     var link = document.createElement('a');
-
-    var date = new Date()
-    let prefix =  "inspection";
+    var date = new Date().toLocaleDateString();
+    let prefix =  "0x11_" + date;
     var fileName = prompt("[*] Enter the POM Filename : ", prefix + "_");
 
     if(fileName !== null){
         link.download=fileName + ".txt";
-        //Chrome Doesn't Require You To Add The Link To document Before Clicking
-        if(window.webkitURL != null){
-            link.href = window.webkitURL.createObjectURL(fileBlob)
        
+
+        //Create an ObjectURL for the file And link It to the Object
+        if(window.webkitURL != null){
+            link.href = window.webkitURL.createObjectURL(fileBlob);
         }
         else{
-            link.href = window.URL.createObjectURL(fileBlob)
+            link.href = window.URL.createObjectURL(fileBlob);
         }
+        //Click the link to download the text file.
         link.click()
     }
-    else{
-
-    }
-    
-    
     
 }
 
 
 
-         //Retrieves Saved Elements From The Local Storage
+//Retrieves Saved Elements From The Local Storage
 const y = chrome.storage.sync.get("xpaths", (data) =>{
-    item = document.getElementById("elements");
-    clear =  document.getElementById("clearButton");
-   
+    items = document.getElementById("elements");
+    clearButton =  document.getElementById("clearButton");
     heading = document.getElementById("heading2");
 
-    let d = data.xpaths;
+    let saved_elements = data.xpaths;
 
     if(d != undefined){
         if(d.length > 0){
             heading.innerText = "Your elements, Inspector :D"
-            for(var x = 0;x < d.length;x++){
-                item.innerHTML += "<p class='element' >" + d[x].variableName + " - " + d[x].xpath + "<br /> <b>" + d[x].comment + "</b> </p>"
+
+            //Render Every Saved Element
+            for(var x = 0;x < saved_elements.length;x++){
+                item.innerHTML += "<p class='element' >" + saved_elements[x].variableName + " - " + saved_elements[x].xpath + "<br /> <b>" + saved_elements[x].comment + "</b> </p>";
             }
         }
 
-        clear.hidden = false;
-        clear.onclick = () =>{
+        clearButton.hidden = false;
+        clearButton.onclick = () =>{
             
             chrome.storage.sync.set({"xpaths" : []}, () =>{
                 console.log("[!] Elements Cleared")
@@ -67,22 +61,22 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
             })
             
             chrome.storage.sync.clear(() =>{
-          //      alert("[*] Saved Elements Cleared !")
+                console.log("[!] Removed All Elements From Storage");
             })
         }
 
         
     }  
 
-   let ex = document.getElementById("export");
-   ex.onclick = function(){
+let exportButton = document.getElementById("export");
+exportButton.onclick = function(){
     var stringData = ""
-    for(var x = 0;x < d.length;x++){
+    for(var x = 0;x < saved_elements.length;x++){
 
-        stringData += "//" + d[x].comment + "\n@FindBy(xpath=\"" + d[x].xpath + "\")\nprivate WebElement " + d[x].variableName + ";\n\n"
+        stringData += "//" + saved_elements[x].comment + "\n@FindBy(xpath=\"" + saved_elements[x].xpath + "\")\nprivate WebElement " + saved_elements[x].variableName + ";\n\n"
     }
 
-    exportToFile(stringData)
+    exportToFile(stringData);
 }
 
  

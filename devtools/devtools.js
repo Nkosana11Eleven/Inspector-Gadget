@@ -1,11 +1,8 @@
 /**
  * @author Nkosana Khoza
- * 
- * 
- * [*] TODO : clean up code and add some comments, Like this here ;)
  */
 
-//Setup Devtools Elements Side Panel
+//Setup Devtools Elements Side Panel And Render The UI
 chrome.devtools.panels.elements.createSidebarPane(
     "[STS] Inspector Gadget", (panel)=>{
         console.log("[!] Devtools Panel Succesfully Created !")

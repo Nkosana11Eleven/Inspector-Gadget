@@ -71,7 +71,7 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
 function isXpath(locator){
     let magicSeq = locator.substring(0, 1);
 
-    if(magicSeq === "//")
+    if(locator.match("//") != null)
         return true;
 
     return false;

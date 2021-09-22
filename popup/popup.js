@@ -68,12 +68,32 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
         
     }  
 
+function isXpath(locator){
+    let magicSeq = locator.substring(0, 1);
+
+    if(magicSeq === "//")
+        return true;
+
+    return false;
+}
+
 let exportButton = document.getElementById("export");
 exportButton.onclick = function(){
     var stringData = ""
     for(var x = 0;x < saved_elements.length;x++){
 
-        stringData += "//" + saved_elements[x].comment + "\n@FindBy(xpath=\"" + saved_elements[x].xpath + "\")\nprivate WebElement " + saved_elements[x].variableName + ";\n\n"
+        //public static By generateQuoteButton = By.id("quoteButton");
+        //public static By saveRiskItemButton = By.xpath("//button[contains(@class,'btn btn-primary')]");
+
+        if(isXpath(saved_elements[x].xpath)){
+            stringData += "//" + saved_elements[x].comment +  "\npublic static By" + saved_elements[x].variableName + " = By.xpath(" + saved_elements[x].xpath + ");\n\n"
+        }
+        else{
+            stringData +=  "//" + saved_elements[x].comment + "\npublic static By " + saved_elements[x].variableName + " = By.id(\"" + saved_elements[x].xpath +");\n\n"
+        }
+
+        // "\npublic static By" + saved_elements[x].variableName + " = By.xpath(" + saved_elements[x].xpath + ");"
+        // stringData += "//" + saved_elements[x].comment + "\n@FindBy(xpath=\"" + saved_elements[x].xpath + "\")\nprivate WebElement " + saved_elements[x].variableName + ";\n\n"
     }
 
     exportToFile(stringData);

@@ -86,7 +86,7 @@ exportButton.onclick = function(){
         //public static By saveRiskItemButton = By.xpath("//button[contains(@class,'btn btn-primary')]");
 
         if(isXpath(saved_elements[x].xpath)){
-            stringData += "//" + saved_elements[x].comment +  "\npublic static By" + saved_elements[x].variableName + " = By.xpath(" + saved_elements[x].xpath + ");\n\n"
+            stringData += "//" + saved_elements[x].comment +  "\npublic static By " + saved_elements[x].variableName + " = By.xpath(" + saved_elements[x].xpath + ");\n\n"
         }
         else{
             stringData +=  "//" + saved_elements[x].comment + "\npublic static By " + saved_elements[x].variableName + " = By.id(\"" + saved_elements[x].xpath +");\n\n"

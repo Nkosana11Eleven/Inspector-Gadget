@@ -5,6 +5,7 @@
 var items;
 var clearButton;
 var heading;
+var exportBtn;
 
 
 //Handles The Exporting Of The Elements Into A Text File
@@ -38,6 +39,8 @@ function exportToFile(textData){
 const y = chrome.storage.sync.get("xpaths", (data) =>{
     items = document.getElementById("elements");
     clearButton =  document.getElementById("clearButton");
+    exportBtn = document.getElementById("export");
+
     heading = document.getElementById("heading2");
 
     let saved_elements = data.xpaths;
@@ -53,6 +56,7 @@ const y = chrome.storage.sync.get("xpaths", (data) =>{
         }
 
         clearButton.hidden = false;
+        exportBtn.hidden = false;
         clearButton.onclick = () =>{
             
             chrome.storage.sync.set({"xpaths" : []}, () =>{

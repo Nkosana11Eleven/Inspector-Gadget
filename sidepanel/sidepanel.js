@@ -29,7 +29,7 @@ const t = chrome.storage.sync.get("xpaths", (d) =>{
     let b = document.getElementById("savedKount");
 
     if(b !== undefined && d.xpaths !== undefined){
-        b.innerText = d.xpaths.length > 0 ? " " + d.xpaths.length : 0
+        b.innerText = d.xpaths.length > 0 ? " : " + d.xpaths.length : 0
     }
     
 });
@@ -43,11 +43,14 @@ btn.onclick = () =>{
     
 
     if(variableName.value === "" || v.value === ""){
-        let footer = document.getElementById("footer");
+        let footer = document.getElementById("savedBox");
         footer.style.transition = "300ms ease-in";
         footer.style.backgroundColor = "var(--danger)";
+        footer.style.width = "max-content";
+        footer.style.height = "12px";
+        footer.style.borderRadius = "18px";
         setTimeout(()=>{
-            footer.style.backgroundColor = "var(--siteColor)";
+            footer.style.backgroundColor = "transparent";
             footer.style.transition = "300ms ease-in-out";
         }, 500)
     }else{
@@ -61,12 +64,15 @@ btn.onclick = () =>{
             savedKount.innerText = " " + d.xpaths.length
         });
 
-        let footer = document.getElementById("footer");
+        let footer = document.getElementById("savedBox");
         footer.style.transition = "300ms ease-in";
         footer.style.backgroundColor = "var(--success)";
+        footer.style.width = "max-content";
+        footer.style.height = "12px";
+        footer.style.borderRadius = "18px";
         
         setTimeout(()=>{
-            footer.style.backgroundColor = "var(--siteColor)";
+            footer.style.backgroundColor = "transparent";
             footer.style.transition = "300ms ease-in-out";
         }, 500)
 

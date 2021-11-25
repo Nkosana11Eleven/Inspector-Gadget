@@ -9,6 +9,11 @@
     font-family: 'Special Elite', cursive;
 }
 
+body{
+    background: rgba(8, 18, 21, 0.945);
+    overflow:hidden;
+}
+
 h3 {
     color: var(--siteColor);
     font-size: 25px;
@@ -19,34 +24,66 @@ h3 {
     display: grid;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.grid-layout{
+    display: grid;
+    overflow:hidden;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows:auto auto auto auto  ;
+    height: 100vh;
+    width: 100vw;
 }
 
 #savedElements{
     display: flex;
-    
-    justify-content: center;
-    align-content: center;
+}
+
+.text{
+    color: var(--textColor);
     text-align: center;
 }
+
+.kount{
+    color: var(--siteColor);
+}
+
+
 
 .footer{
     background-color: var(--siteColor);
     border:none;
     border-radius: 2px;
-    height: 45px;
-    width: auto;
-    position:relative;
+    height: 35px;
+    width: 80vw;
+    position:absolute;
     bottom: 0px;
+    align-self: center;
 }
 
-h2 {
-    margin-left:  5px;
-
+.item-1{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: span 3;
 }
 
-footer div h2, span {
-    color : var(--textColor);
+.item-2{
+    grid-row-start: 1;
+    grid-column-start: 4;
+    align-self: center;
+    display: flex;
+    padding: 0;
 }
+
+.item-3{
+    grid-column-start: 4;
+    grid-row-start: 2;
+    width: max-content;
+    align-self: center;
+}
+
 
 #saveIcon{
     width: 18px;
@@ -109,7 +146,7 @@ label{
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 5px;
-    text-align:start;
+    text-align:center;
 }
 .mainContainer{
     margin-top: 10px;
@@ -118,8 +155,7 @@ label{
 }
 
 input{
-    min-width: 300px;
-    max-width: 380px;
+    width: 380px;
     height: 25px;
     border-radius: 10px;
     border : var(--siteColor) 1px solid ;

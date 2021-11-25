@@ -14,46 +14,48 @@
         <h3>[STS] Inspector Gadget</h3>
 
 
-        <div class="mainContainer">    
-            <div style="display: grid;grid-template-columns: 350px 380px;row-gap: 30px;width: 100vw;">
-                <div class="inputBox">
-                    <label for="variableName" >Java Variable Name</label>
-                    <input type="text" id="variableName" placeholder="eg. loginButton1" />
+        
+            <div class="grid-layout">
+                <div class="item-1">
+                    <div class="inputBox">
+                        <label for="variableName" >Java Variable Name</label>
+                        <input type="text" id="variableName" placeholder="eg. loginButton1" />
+                    </div>
+    
+                    <div class="inputBox">
+                        <label for="comment" >Variable Comment</label>
+                        <input type="text" id="comment" placeholder="eg. Logs into the system" />
+                    </div>
+            
+                    <div class="inputBox">
+                        <label for="elementXpath" >Element Locator</label>
+                        <input type="text" id="elementXpath" placeholder="eg. /html/body/div[1]/a[0] || username" />
+                    </div>
+
                 </div>
 
-                <div class="inputBox">
-                    <label for="comment" >Variable Comment</label>
-                    <input type="text" id="comment" placeholder="eg. Logs into the system" />
-                </div>
-        
-                <div class="inputBox">
-                    <label for="elementXpath" >Element Locator</label>
-                    <input type="text" id="elementXpath" placeholder="eg. /html/body/div[1]/a[0] || username" />
+                <span id="savedBox"class="item-2">
                     
+                    
+                        <h2 class="text">Saved Elements&nbsp;&nbsp;  </h2>
+                        <h2 class="kount" id="savedKount"> &nbsp;: 0</h2> 
+                        
                    
-                </div>
-                
-                <button type="button" class="btn" id="capBtn">
-                    Save Element
-                </button>
+                </span>
 
-               
-        
-               
+                <div class="item-3">
+                    <button type="button" class="btn" id="capBtn">
+                        Save Element
+                    </button>
+                </div>
+
             </div>
-        </div>
-       
 
         <script src="sidepanel.js"></script>
         
        
     </body>
-    <footer class="footer" id="footer">
-            <div id="savedElements">
-                <h2>Saved Elements : </h2>
-                <h2 id="savedKount">0</h2>
-            </div>
-    </footer>
+  
 </html>
 
 

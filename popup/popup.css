@@ -1,6 +1,6 @@
 :root{
     --siteColor : rgb(228, 103, 8);
-    --Danger : rgba(133, 4, 4, 0.933);
+    --Danger : rgba(250, 4, 4, 0.96);
     --stdTrans : cubic-bezier(0.785, 0.135, 0.15, 0.86) 150ms;
 }
 
@@ -8,15 +8,16 @@
     font-family: 'Special Elite', cursive;
 }
 body {
-    background-color: rgb(28, 41, 38);
+    background-color: rgba(8, 18, 21, 0.945);
     min-width: 700px;
   
-    max-height: fit-content;
-    min-height: 300px;
+    max-height: max-content;
+    min-height: min-content;
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    min-width: 650px;
+    max-width: max-content;
 }
 
 #exportIcon{

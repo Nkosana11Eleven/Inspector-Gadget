@@ -10,7 +10,6 @@
 body {
     background-color: rgba(8, 18, 21, 0.945);
     min-width: 700px;
-  
     max-height: max-content;
     min-height: min-content;
     display: grid;
@@ -87,9 +86,9 @@ b {
     color: var(--siteColor);
     min-height: 20px;
     max-height:10%;
-    min-width: 100%;
+    min-width: 450px;
     padding:5px;
-    max-width: 100%;
+    max-width: max-content;
     border-radius: 8px;
     text-align: center;
 }

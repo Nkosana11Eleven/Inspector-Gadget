@@ -1,23 +1,26 @@
 # 🔥 🕵️‍♂️ Inspector-Gadget 🕵️‍♂️ 🔥
-Designed to improve the workflow process of automation engineers
 
-### How does it work?
+Designed to improve the workflow process of automation engineers during _Inspection_
 
-  - Generates a batch of variables with respective xpaths stored during inspection
+### Description
 
-1. Use third-party extension to inspect an element's xpath
+The tool generates java code for the batch of elements you capture, allowing you to paste it into your source file and start writing step definitions for the test.
 
-2. Use Inspector Gadget to store the Element's variable name, xpath and optionally a comment associated to further provide description of the element
+### Usage
 
-3. Repeat step 2 until satisfied.
+1. Use third-party extension(eg. _ChroPath_) to inspect an element's **locator/xpath**
 
-4. Export stored elements.
+2. Use Inspector Gadget to store the Element's _variable name_, _locator_ and optionally a _comment_ associated to further provide description of the element
 
-5. CTRL+C, 😉 CTRL+V into your code editor 😆 . And Enjoy ! 💥
+3. Repeat **step 2** until satisfied.
+
+4. Download the code generated from the stored elements .
+
+5. CTRL+C, CTRL+V into your code editor and start coding 💥
 
 6. Thank you for using 🕵️‍♂️ Inspector Gadget 🕵️‍♂️
 
 
 ### Author
-🦂 Nkosana Khoza 🦹‍♂️ 
-🤓 Test Automation Analyst
+Nkosana Khoza
+Test Automation Analyst

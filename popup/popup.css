@@ -88,7 +88,7 @@ b {
     max-height:10%;
     min-width: 450px;
     padding:5px;
-    max-width: max-content;
+    max-width: 90vw;
     border-radius: 8px;
     text-align: center;
 }

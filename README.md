@@ -23,4 +23,3 @@ The tool generates java code for the batch of elements you capture, allowing you
 
 ### Author
 Nkosana Khoza
-Test Automation Analyst

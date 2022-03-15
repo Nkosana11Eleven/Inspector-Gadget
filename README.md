@@ -4,7 +4,7 @@ Designed to improve the workflow process of automation engineers during _Inspect
 
 ### Description
 
-The tool generates java code for the batch of elements you capture, allowing you to paste it into your source file and start writing step definitions for the test.
+The tool generates java code for the batch of elements you capture, allowing you to paste it into your source file and start writing step definitions for the test suite.
 
 ### Usage
 
@@ -18,7 +18,7 @@ The tool generates java code for the batch of elements you capture, allowing you
 
 5. CTRL+C, CTRL+V into your code editor and start coding 💥
 
-6. Thank you for using 🕵️‍♂️ Inspector Gadget 🕵️‍♂️
+7. Thank you for using 🕵️‍♂️ Inspector Gadget 🕵️‍♂️
 
 
 ### Author

@@ -76,6 +76,7 @@ btn.onclick = () =>{
             footer.style.transition = "300ms ease-in-out";
         }, 500)
 
+        //Clear the input elements
         variableName.value = ""
         v.value = ""
         comment.value = ""

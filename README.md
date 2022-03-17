@@ -1,4 +1,4 @@
-# 🔥 🕵️‍♂️ Inspector-Gadget 🕵️‍♂️ 🔥
+# 🕵️‍♂️ Inspector-Gadget 🕵️‍♂️
 
 Designed to improve the workflow process of automation engineers during _Inspection_
 
